@@ -10,6 +10,8 @@ botonCrear.addEventListener("click", (e)=>{
      var item={
           nombre: agregar,
           estado: "iniciando",
+          cajas: {},
+          cantCajas:0,
      }
 
      db.doc(agregar).set(item).then(() =>{

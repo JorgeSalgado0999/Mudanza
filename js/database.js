@@ -15,7 +15,7 @@ db.onSnapshot(function(snapshot){
                console.log(i);
                console.log(i[1].nombre);
                console.log(i[1].items);
-             });
+          });
              
           
      });

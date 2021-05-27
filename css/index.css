@@ -5,6 +5,7 @@
      align-items: center;
 
      height: 70px;
+     width: 90%;
      padding: 5px;
      background-color: rgba(216, 216, 216, 0.5);
      border: 2px solid rgba(216, 216, 216, 1);
@@ -24,6 +25,7 @@
      align-items: center;
 
      height: 70px;
+     width: 90%;
      padding: 5px;
      background-color: rgba(216, 216, 216, 0.5);
      border: 2px solid rgba(216, 216, 216, 1);
@@ -52,5 +54,16 @@
 .elemento-caja{
      display: flex;
      justify-content: space-between;
-     align-items: ;
+     align-items: center;
+}
+.icon img{
+     height: 30px;
+     width: 30px;
+}
+
+.todaCaja{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
 }
