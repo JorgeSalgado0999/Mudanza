@@ -21,26 +21,17 @@
           <button class="btn btn-light" onclick="logOut()">LogOut</button>
      </nav>
      <div class="container">
-          <div class="row">
-
-               <div class="col-sm-12 mt-5 center">
-                    <button type="button" class="btn btn-success" onclick="window.location.href = './crearMudanza.html' ">Crear Mudanza</button>
+          <form class="mt-5">
+               <div class="mb-3">
+               <label for="" class="form-label">Nombre Mudanza</label>
+               <input type="text" class="form-control" id="nom">
                </div>
-
-               <div class="col-sm-12 mt-5">
-                    <h1>Mudanzas Actuales</h1>
-               </div>
-
-               <div class="col-sm-12" id="mudanzas">
-                    <!-- Aquí  se muestran todas las mudanzas -->
-                    
-
-               </div>
-          </div>
+               <button class="btn btn-primary" id="create">Crear</button>
+          </form>
      </div>
     
      <script src="./../js/fireBase.js"></script>
      <script src="./../js/validation.js"></script>
-     <script src="./../js/addMudanzas.js"></script>
+     <script src="./../js/crearMudanza.js"></script>
 </body>
 </html>

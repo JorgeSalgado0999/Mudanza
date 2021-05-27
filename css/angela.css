@@ -31,7 +31,6 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    align-items: center;
 
 }
 .principal button{
@@ -43,4 +42,9 @@
     margin-top: 20px;
     width: 50%;
 
+}
+
+.container{
+    margin: auto;
+    text-align: center;
 }

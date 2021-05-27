@@ -1,17 +1,7 @@
-// Your web app's Firebase configuration
-var firebaseConfig = {
-     apiKey: "AIzaSyCTVRVk8QrRy_LdPAqo8biE0ImFVry-HVI",
-     authDomain: "mudanza-552e2.firebaseapp.com",
-     projectId: "mudanza-552e2",
-     storageBucket: "mudanza-552e2.appspot.com",
-     messagingSenderId: "674167731342",
-     appId: "1:674167731342:web:5c22b580a31af391b685df"
-   };
-   // Initialize Firebase
-   firebase.initializeApp(firebaseConfig);
 
+let db = firebase.firestore().collection("mudanzas");
 
-let db = firebase.firestore().collection("mudanzas").onSnapshot(function(snapshot){
+db.onSnapshot(function(snapshot){
 
 
      snapshot.forEach(function(item){
@@ -25,7 +15,7 @@ let db = firebase.firestore().collection("mudanzas").onSnapshot(function(snapsho
                console.log(i);
                console.log(i[1].nombre);
                console.log(i[1].items);
-             })
+             });
              
           
      });

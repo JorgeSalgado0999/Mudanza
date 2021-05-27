@@ -8,49 +8,42 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
     <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./../css/index.css">
+    <link rel="stylesheet" href="./../css/general.css">
 
     <title>HTML Elements Reference</title>
 
 </head>
 <body>
+     <nav>
+          <div class="usuario">
+               <img src="./../img/user.svg" alt="">
+               <h5 id="user">Nombre Apellido</h5>
+          </div>
+          <button class="btn btn-light" onclick="logOut()">LogOut</button>
+     </nav>
+
      <div class="container">
           <div class="row">
 
                <div class="col-sm-12 mt-5">
-                    <h1>Visualización de las cajas</h1>
+                    <h1 class="center" id="nombreMudanza">Cajas en mudanza</h1>
                </div>
 
-               <div class="col-sm-12">
+               <div class="col-sm-12 mt-2 center">
+                    <button type="button" class="btn btn-success" onclick="window.location.href = './crearCaja.html' ">Crear Caja</button>
+               </div>
+
+               <div class="col-sm-12 mt-3" id="cajas">
                     <!-- Aquí  se muestran todas las cajas -->
-                    <div class="caja mb-2">
-                         <div class="nombre-caja">
-                              <span>1</span> <p>cocina</p>
-                         </div>
-                    </div>
-
-                    <div class="caja mb-2">
-                         <div class="nombre-caja">
-                              <span>2</span> <p>cuarto niños</p>
-                         </div>
-                    </div>
-
-                    <div class="caja mb-2">
-                         <div class="nombre-caja">
-                              <span>3</span> <p>sala</p>
-                         </div>
-                    </div>
-
-                    <div class="caja mb-2">
-                         <div class="nombre-caja">
-                              <span>4</span> <p>comedor</p>
-                         </div>
-                    </div>
+                    
 
                </div>
           </div>
      </div>
     
 
-    <script src="./../js/database.js"></script>
+     <script src="./../js/fireBase.js"></script>
+     <script src="./../js/validation.js"></script>
+     <script src="./../js/addCajas.js"></script>
 </body>
 </html>
