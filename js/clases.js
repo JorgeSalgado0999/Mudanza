@@ -15,8 +15,6 @@ class Caja {
     }
 }
 
-
-
 class Objeto {
      constructor(importante, nombre, fragil) {
          this.importante = importante;
