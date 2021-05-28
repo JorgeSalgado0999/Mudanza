@@ -2,15 +2,16 @@ let botonCrear = document.getElementById('create');
 let db = firebase.firestore().collection("mudanzas");
 
 var title = localStorage.getItem('ref');
+var titleCaja = localStorage.getItem('caja');
 
 let dbActual = db.doc(title);
 let dbData;
 
 var item = {};
 
-var cont=1;
-var sum;
+
 dbActual.get().then((doc) => {
+
     if (doc.exists) {
      //console.log("Document data:", doc.data().cajas);
      dbData = doc.data();
@@ -37,22 +38,17 @@ botonCrear.addEventListener("click", (e)=>{
      e.preventDefault();
 
      let agregar = document.getElementById('nom').value;
-     //console.log(agregar);
 
-     //console.log(dbData);
-     let cajaNom = `caja${item.cantCajas+1}`;
-     console.log(cajaNom);
-     nuevaCaja = {};
-     nuevaCaja["nombre"] = agregar;
-     nuevaCaja["items"] = 0;
-     nuevaCaja["contenido"] = {};
+     var nuevoItem = {};
+     nuevoItem["nombre"] = agregar;
+     nuevoItem["fragil"] = "false";
 
-     item.cajas[cajaNom] = nuevaCaja;
-     item.cantCajas += 1;
+     item.cajas[titleCaja].contenido[`item${item.cajas[titleCaja].items}`] = nuevoItem;
+     item.cajas[titleCaja].items+=1;
 
      dbActual.set(item).then(() =>{
           console.log("actualizado");
-          window.location.href = "./../pages/vistaCajas.html";
+          window.location.href = "./../pages/vistaItems.html";
      }); 
      
      //console.log(item);

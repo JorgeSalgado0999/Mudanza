@@ -52,7 +52,7 @@ infoCajas.get().then((doc) => {
           
                     localStorage.setItem('caja', e.target.id);
           
-                    //window.location.href = "./../pages/vistaItems.html"
+                    window.location.href = "./../pages/vistaItems.html"
                });
           });
 
