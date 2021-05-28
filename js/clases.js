@@ -38,7 +38,7 @@ class Objeto {
  }
 
 class Mudanza {
-    constructor(codigo, estado, cajas, domicilioEntrega, domicilioSalida) {
+    constructor(codigo, estado, cajas, domicilioEntrega, domicilioSalida, empaquetador) {
         this.codigo = codigo;
         this.estado = estado;
         this.cajas = cajas;
@@ -62,6 +62,9 @@ class Mudanza {
     }
     set estado(estadoActulizado){
         this.estado = estadoActualizado;
+    }
+    set empaquetador(nombre){
+        this.empaquetador = nombre;
     }
 }
 
