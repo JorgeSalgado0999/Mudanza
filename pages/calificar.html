@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../css/index.css">
+    <link rel="stylesheet" href="./../css/general.css">
+
+    <title>HTML Elements Reference</title>
+
+</head>
+<body>
+     <nav>
+          <div class="usuario">
+               <img src="./../img/user.svg" alt="">
+               <h5 id="user">Nombre Apellido</h5>
+          </div>
+          <button class="btn btn-light" onclick="logOut()">LogOut</button>
+     </nav>
+     <div class="container">
+          <form class="mt-5">
+               <div class="mb-3">
+               <label for="" class="form-label">calificacion</label>
+               <input type="number" class="form-control" id="calificacion" min="1" max="5">
+               
+               <label for="" class="form-label">opiniones</label>
+               <textarea type="text" class="form-control" id="comentarios"> </textarea>
+               </div>
+               <button class="btn btn-primary" id="create">Comentar</button>
+          </form>
+     </div>
+    
+     <script src="./../js/fireBase.js"></script>
+     <script src="./../js/validation.js"></script>
+     <script src="./../js/calificar.js"></script>
+</body>
+</html>

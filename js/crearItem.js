@@ -21,6 +21,7 @@ dbActual.get().then((doc) => {
           estado: doc.data().estado,
           cajas: doc.data().cajas,
           cantCajas: doc.data().cantCajas,
+          calificacion:doc.data().calificacion,
      }
 
 
@@ -41,7 +42,7 @@ botonCrear.addEventListener("click", (e)=>{
 
      var nuevoItem = {};
      nuevoItem["nombre"] = agregar;
-     nuevoItem["fragil"] = "false";
+     nuevoItem["fragil"] = "No Fragil";
 
      item.cajas[titleCaja].contenido[`item${item.cajas[titleCaja].items}`] = nuevoItem;
      item.cajas[titleCaja].items+=1;

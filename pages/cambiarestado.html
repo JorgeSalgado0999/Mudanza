@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+    <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../css/index.css">
+    <link rel="stylesheet" href="./../css/general.css">
+
+    <title>HTML Elements Reference</title>
+
+</head>
+<body>
+     <nav>
+          <div class="usuario">
+               <img src="./../img/user.svg" alt="">
+               <h5 id="user">Nombre Apellido</h5>
+          </div>
+          <button class="btn btn-light" onclick="logOut()">LogOut</button>
+     </nav>
+     <div class="container">
+          <form class="mt-5">
+               <div class="mb-3">
+               <label for="" class="form-label">Estado de la mudanza</label>
+               <select class="form-select" aria-label="Default select example" id="status">
+                    <option selected>Escoge el estado</option>
+                    <option value="Empacando">Empacando</option>
+                    <option value="En camino">En camino</option>
+                    <option value="Finalizada">Finalizada</option>
+               </select>
+               <button class="btn btn-primary mt-4" id="update">Actualizar</button>
+          </form>
+     </div>
+    
+     <script src="./../js/fireBase.js"></script>
+     <script src="./../js/validation.js"></script>
+     <script src="./../js/estado.js"></script>
+</body>
+</html>

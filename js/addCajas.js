@@ -45,7 +45,7 @@ infoCajas.get().then((doc) => {
 
              });
 
-             arregloCajas.forEach((item) =>{
+          arregloCajas.forEach((item) =>{
 
                document.getElementById(item.id).addEventListener("click", (e)=>{
                     console.log(`me diste click en: ${e.target.id}`);

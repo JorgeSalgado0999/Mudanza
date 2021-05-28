@@ -1,4 +1,4 @@
-let botonCrear = document.getElementById('create');
+let botonCambiar = document.getElementById('update');
 let db = firebase.firestore().collection("mudanzas");
 
 var title = localStorage.getItem('ref');
@@ -8,9 +8,11 @@ let dbData;
 
 var item = {};
 
-var cont=1;
-var sum;
+let inputEstado = document.getElementById('status');
+
+
 dbActual.get().then((doc) => {
+
     if (doc.exists) {
      //console.log("Document data:", doc.data().cajas);
      dbData = doc.data();
@@ -23,6 +25,8 @@ dbActual.get().then((doc) => {
           calificacion:doc.data().calificacion,
      }
 
+     //inputEstado.value = doc.data().estado;
+
 
     } else {
         // doc.data() will be undefined in this case
@@ -34,27 +38,23 @@ dbActual.get().then((doc) => {
 
 
 
-botonCrear.addEventListener("click", (e)=>{
+botonCambiar.addEventListener("click", (e)=>{
      e.preventDefault();
 
-     let agregar = document.getElementById('nom').value;
-     //console.log(agregar);
+     
+     inputEstado = document.getElementById('status').value;
+     //console.log(inputEstado)
+     
 
-     //console.log(dbData);
-     let cajaNom = `caja${item.cantCajas+1}`;
-     console.log(cajaNom);
-     nuevaCaja = {};
-     nuevaCaja["nombre"] = agregar;
-     nuevaCaja["items"] = 0;
-     nuevaCaja["contenido"] = {};
+     var itemCreado = dbData;
 
-     item.cajas[cajaNom] = nuevaCaja;
-     item.cantCajas += 1;
+     itemCreado["estado"] = inputEstado;
+     
 
-     dbActual.set(item).then(() =>{
+     dbActual.set(itemCreado).then(() =>{
           console.log("actualizado");
           window.location.href = "./../pages/vistaCajas.html";
-     }); 
+     });
      
      //console.log(item);
 
