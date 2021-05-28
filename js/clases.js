@@ -5,7 +5,7 @@ class Caja {
         this.objetos = objetos;
       }
     get codigo(){
-        return this.codigo
+        return this.codigo;
     }
     get categoria(){
         return this.categoria;
@@ -36,3 +36,53 @@ class Objeto {
          this.fragil = fragil;
      }
  }
+
+class Mudanza {
+    constructor(codigo, estado, cajas, domicilioEntrega, domicilioSalida) {
+        this.codigo = codigo;
+        this.estado = estado;
+        this.cajas = cajas;
+        this.domicilioEntrega = domicilioEntrega,
+        this.domicilioSalida = domicilioSalida
+      }
+    get codigo(){
+        return this.codigo;
+    }
+    get categoria(){
+        return this.categoria;
+    }
+     get domicilioEntrega(){
+        return this.domicilioEntrega;
+    }
+      get domicilioSalida(){
+        return this.domicilioSalida;
+    }
+    get objetos(){
+        return this.objetos;
+    }
+    set estado(estadoActulizado){
+        this.estado = estadoActualizado;
+    }
+}
+
+class Usuario {
+    constructor(codigo, nombre, foto, categoria) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.foto = foto;
+        this.categoris = categoria;
+      }
+    get codigo(){
+        return this.codigo;
+    }
+    get categoria(){
+        return this.categoria;
+    }
+    get nombre(){
+        return this.nombre;
+    }
+      get foto(){
+        return this.foto;
+    }
+}
+
