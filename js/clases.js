@@ -88,4 +88,23 @@ class Usuario {
         return this.foto;
     }
 }
-
+class Domicilio {
+    constructor(calle, numero, colonia, codigoPostal) {
+        this.calle = calle;
+        this.numero = numero;
+        this.colonia = colonia;
+        this.codigoPostal = codigoPostal;
+      }
+    get calle(){
+        return this.calle;
+    }
+    get numero(){
+        return this.numero;
+    }
+    get colonia(){
+        return this.nombre;
+    }
+      get codigoPostal(){
+        return this.codigoPostal;
+    }
+}
